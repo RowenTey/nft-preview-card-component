@@ -116,6 +116,8 @@ p {
 }
 
 .card .price-time {
+    width: 100%;
+    height: 100%;
     justify-content: space-between;
     margin: 20px 0;
 }
