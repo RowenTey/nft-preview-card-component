@@ -23,7 +23,7 @@ Users should be able to:
 1. Positioning of elements (CSS Units/Pseudo-elements/Position)
 
 ## 💗 What I Learnt
--using the before and after psuedo-element
+ - using the before and after psuedo-element
 ```css
 .card .img-wrapper::before {
     content: '';
