@@ -18,7 +18,7 @@ Users should be able to:
 ## 🔗 Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/interactive-rating-component-using-css-flexbox-S1n-EXESq)
-- [Live Site URL](https://ks-interactive-rating-component.netlify.app/)
+- [Live Site URL](https://nft-preview-card-component-bfc.pages.dev/)
 
 ## 😓 What I Struggled With
 
