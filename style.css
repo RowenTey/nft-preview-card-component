@@ -24,8 +24,10 @@ body {
 }
 
 main {
-    width: 100vh;
-    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 p {
@@ -34,35 +36,67 @@ p {
 
 .card {
     background-color: var(--cardBG);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 350px;
-    height: 550px;
+    position: relative;
+    max-width: 327px;
     display: flex;
     flex-direction: column;
     color: white;
-    padding: 10px;
-    font-size: 15px;
+    padding: 15px;
+    font-size: 18px;
     border-radius: 20px;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.7);
+}
+
+.card .img-wrapper {
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
+.card .img-wrapper::before {
+    content: '';
+    position: absolute;
+    background-color: var(--Cyan);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 18px;
+    z-index: 2;
+}
+
+.card .img-wrapper:hover::before {
+    transition: 0.3s ease;
+    opacity: 0.5;
+}
+
+.card .img-wrapper::after {
+    content: '';
+    position: absolute;
+    background-image: url("./images/icon-view.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    transform: translate(0, -100%);
+    opacity: 0;
+    z-index: 3;
+}
+
+.card .img-wrapper:hover::after {
+    opacity: 1;
+    transition: 0.3s ease-in-out;
 }
 
 .card .img {
-    width: 19rem;
-    height: 17rem;
-    border-radius: 20px;
-    margin: 10px auto 10px;
-}
-
-.card .img:hover {
-    cursor: pointer;
-    background-image: url("./images/icon-view.svg");
+    display: block;
+    max-width: 100%;
+    height: 100%;
+    border-radius: 18px;
+    z-index: 1;
 }
 
 .card h1 {
-    margin-top: 5px;
-    margin-left: 10px;
+    margin-top: 15px;
     font-weight: 400;
     transition: 0.3s ease;
 }
@@ -74,7 +108,6 @@ p {
 
 .card .description {
     margin-top: 15px;
-    margin-left: 10px;
     font-weight: 300;
 }
 
@@ -87,17 +120,10 @@ p {
     margin: 20px 0;
 }
 
-.card .price-time .price {
-    margin-left: 10px;
-}
-
 .card .price-time .price p {
     color: var(--Cyan);
     margin-left: 10px;
-}
-
-.card .price-time .time {
-    margin-right: 10px;
+    font-weight: 600;
 }
 
 .card .price-time .time p {
@@ -105,20 +131,18 @@ p {
 }
 
 .line {
-    margin: 0 10px;
     border: 1px solid var(--line);
 }
 
 .profile {
     align-items: center;
     width: 19rem;
-    height: 4rem;
-    margin-top: 15px;
+    height: 3rem;
+    margin: 10px auto 5px;
 }
 
 .profile img {
-    margin-left: 10px;
-    width: 3.5rem;
+    width: 2rem;
     border-radius: 50%;
     border: 1px solid white;
 }
