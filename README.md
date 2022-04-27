@@ -59,3 +59,8 @@ Users should be able to:
     transition: 0.3s ease-in-out;
 }
 ```
+
+## 💪🏼 Improvements
+- [ ] reduce h1 font size
+- [ ] reduce p font size
+- [ ] adjust ::before and ::after pseudo-element
