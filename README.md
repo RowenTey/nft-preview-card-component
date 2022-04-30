@@ -61,6 +61,5 @@ Users should be able to:
 ```
 
 ## 💪🏼 Improvements
-- [ ] reduce h1 font size
-- [ ] reduce p font size
-- [ ] adjust ::before and ::after pseudo-element
+- [x] reduce h1 font size
+- [x] reduce p font size
